@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MediaSoft</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>MediaSoft</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Преимущества" onclick="slowScroll('#main')">Преимущества</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Возможности">Возможности</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>MediaSoft</h1>
+    <h3>твой помощник при подготовке к экзаменам </h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши крутые разработчики помогут тебе</h2>
+      <span>И ты заберешь желанные 100баллов за экзамен</span>
+    </div>
+    <div class="text">
+      <span>Уже больше 6-ти лет наши разработчики готовят школьников  к сдаче ЕГЭ по информатике и математике. С каждым годом количество обучающихся только возрастает. Мы рады, видеть улыбки наших студентов после выполнения самых сложных заданий. После успешной сдачи экзаменов наши ученики поступают в лучшие Вузы страны. МЫ ИМИ ОЧЕНЬ ГОРДИМСЯ! </span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Курсы подготовки к экзаменам</h2>
+    <h4>с нами ты все поймешь</h4>
+
+    <div class="img">
+      <div class='holder'>
+        <img src="https://sun9-39.userapi.com/c849336/v849336094/a29b7/jMD-ipporkc.jpg" alt="">
+            <div class='block'>
+                <h2>Когда и где проходят курсы </h2>
+              Данный курс предназначен для учащихся 11-х классов. Занятия проходят через онлайн платформу Discord каждый вторник и четверг с 16:00 по 18:00.
+
+            </div>
+      <span>ЕГЭ по информатике</span>
+    </div>
+    </div>
+    <div class="img">
+      <div class='holder'>
+      <img src="https://sun9-39.userapi.com/c849336/v849336094/a29b7/jMD-ipporkc.jpg" alt="">
+      <div class='block'>
+        <h2>Когда и где проходят курсы</h2>
+        Курсы по математике делятся на два уровня. Первый уровень предназначен для учащихся 10-х классов. Занятия по первому уровню проходят каждую среду на онлайн платформе DIscord с 15:00 по 16:30<br>
+        Второй уровень предназначен для учащихся 11-х классов. Занятия проходят каждый понедельник и вторник с 17:00 по 18:30 на онлайн платформе Discord.
+
+   </div>
+      <span>ЕГЭ по математике</span>
+    </div>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Курс, который Вы бы хотели посещать  <span>*</span></label><br>
+			<textarea placeholder="Введите название курса и выбранный вами уровень" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
